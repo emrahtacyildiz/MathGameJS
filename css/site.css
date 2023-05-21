@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input[type="number"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 70px;
+    width: 200px;
+    color: white;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::placeholder {
+    font-size: 30px;
+}
+
+input[type="number"]:hover {
+    background: transparent;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.counterCorrect {
+    background-color: seagreen;
+    font-size: 100px;
+    color: white;
+    width: 200px;
+}
+.counterWrong {
+    background-color: red;
+    font-size: 100px;
+    color: white;
+    width: 200px;
+}
+
+button {
+    width: 150px;
+}
+
+#coderet {
+    text-decoration: none;
+    color: #c74634;
+}
+

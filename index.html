@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="MathGame.styles.css" />
+</head>
+<body>
+
+    <div class="container mt-5 bg-secondary pt-1">
+        <header class="container bg-black bg-opacity-50 text-center mt-1 pb-1">
+            <h1 class="display-4 text-white">MATH GAME</h1>
+        </header>
+        <main role="main" class="pb-2 m-5">
+            <section class="container bg-gradient text-center mt-1 pb-1 pt-3">
+                <button class="btn-dark btn-lg mt-1 mb-3" value="start" id="btnStart">START</button>
+                <button class="btn-dark btn-lg mt-1 mb-3" value="stop" id="btnStop">STOP</button>
+            </section>
+            <section class="container bg-dark text-center">
+                <section class="row pt-3 align-items-center">
+                    <section class="col-5 bg-dark">
+                        <p class="display-3 text-white mt-3" id="txtQuestion"></p>
+                    </section>
+                    <section class="col-2 bg-black">
+                        <p class="display-3 text-white mt-3">=</p>
+                    </section>
+                    <section class="col-5 bg-dark text-center">
+                        <input class="text-center" type="number" id="txtAnswer" placeholder="ANSWER" />
+                        <button class="btn-dark btn-lg  mb-3" value="send" id="btnSend">SEND</button>
+                    </section>
+                </section>
+        
+                <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="resultTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="resultTitle">Game Over!</h5>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" id="modalClose">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <section class="row mt-1 p-1">
+                    <div class="col-4"></div>
+                    <section class="col-4 text-center d-flex">
+                        <p id="correctAnswer" class="counterCorrect m-3">0</p>
+                        <p id="wrongAnswer" class="counterWrong m-3">0</p>
+                    </section>
+                    <div class="col-4"></div>
+                </section>
+        
+                <!-- Modal correctAnswer-->
+                <div class="modal fade" id="modalCorrect" tabindex="-1" role="dialog" aria-labelledby="modalCorrectLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="congrats">Congrats!</h5>
+                            </div>
+                            <div class="modal-body" id="modalBodyCorrect">
+                                <p>Correct answer! You are great!</p>
+                            </div>
+                            <div class="modal-footer"> </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Modal wrongAnswer-->
+                <div class="modal fade" id="modalWrong" tabindex="-1" role="dialog" aria-labelledby="modalWrongLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="sorry">Sorry!</h5>
+                            </div>
+                            <div class="modal-body"></div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
+        
+            </section>
+            <section class="row mt-1 p-1">
+                <div class="col-12 display-3 text-center text-white-50">
+                    <label id="minutes">00</label>&middot;<label id="seconds">00</label>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            &copy; 2023 - Math Game by <a href="https://coderet.com" id="coderet" target="_blank">coderet</a>
+        </div>
+    </footer>
+
+    <script src="js/jq.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js"></script>
+    
+</body>
+</html>
